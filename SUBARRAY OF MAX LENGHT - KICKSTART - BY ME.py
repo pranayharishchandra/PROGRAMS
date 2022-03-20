@@ -49,8 +49,10 @@ print(s)
 print("max length of subarray possible = ",b+1)
 
 
-
-# ONE MORE PROGRAM BY ME TO SOLVE THIS - 20 march 11pm
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#====================================================================================================================================================================
+# ONE MORE PROGRAM BY ME TO SOLVE THIS 
+#- 20 march 11pm
 t = int(input("enter number of test cases"))
 arr = []
 for i in range(t):
@@ -59,7 +61,7 @@ for i in range(t):
 
 lenn = 2
 count = 2
-diff = arr[0] - arr[1]
+
 for i in range(2,t):
     diff = abs(arr[i-2] - arr[i-1])
     diff2 = abs(arr[i] - arr[i-1])
@@ -71,6 +73,5 @@ for i in range(2,t):
     if i == t-1:
         if lenn < count:
             lenn = count
-
 print(lenn)
 
