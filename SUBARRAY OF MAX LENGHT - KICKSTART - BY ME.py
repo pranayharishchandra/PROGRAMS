@@ -44,6 +44,6 @@ for i in range(1,t-1):#this loop is to check the differences.... are the differe
             
         count = 1     #keep this out because you want to reset count to 1 whenever diff is not consiquetive
 
-print("possible subarray lengths = ",end = "")
+print("possible subarray lengths = ",end = "") #the last element of this is has some problem for some cases... sometimes 2 is not printed some times printed... but this program gives correct answer ignore the last element
 print(s)
 print("max length of subarray possible = ",b+1)
