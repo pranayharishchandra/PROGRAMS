@@ -2,7 +2,7 @@
 #KICKSTART  
 # - https://youtu.be/eJcBH0xvG98?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ&t=961 
 # - longest consiquestive subarray
-
+#17 march 7pm
 a = []
 count = 1
 t = int(input("enter number of elements in the array : "))
@@ -47,3 +47,30 @@ for i in range(1,t-1):#this loop is to check the differences.... are the differe
 print("possible subarray lengths = ",end = "") #the last element of this is has some problem for some cases... sometimes 2 is not printed some times printed... but this program gives correct answer ignore the last element
 print(s)
 print("max length of subarray possible = ",b+1)
+
+
+
+# ONE MORE PROGRAM BY ME TO SOLVE THIS - 20 march 11pm
+t = int(input("enter number of test cases"))
+arr = []
+for i in range(t):
+    ele = int(input("enter elements = "))
+    arr.append(ele)
+
+lenn = 2
+count = 2
+diff = arr[0] - arr[1]
+for i in range(2,t):
+    diff = abs(arr[i-2] - arr[i-1])
+    diff2 = abs(arr[i] - arr[i-1])
+    if diff2 == diff:
+        count += 1
+    else :
+        if lenn < count:
+            lenn = count
+    if i == t-1:
+        if lenn < count:
+            lenn = count
+
+print(lenn)
+
