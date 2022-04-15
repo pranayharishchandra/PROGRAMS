@@ -1,3 +1,4 @@
+#LOGIC - https://github.com/pranayharishchandra/PROGRAMS/blob/main/INSERT%20ELEMENTS%20SPIRALLY%20IN%20MATRIX.jpg
 m, n = map(int, input("enter size of matrice : row col = ").split())
 size = m * n
 
