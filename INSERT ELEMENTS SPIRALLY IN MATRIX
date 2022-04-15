@@ -8,43 +8,40 @@ for i in range(m):
 
 count = 0
 for i in range(min(m, n)):
-    for col in range(i, m-i):
-        # e = int(input(">"))
+    for col in range(i, n-i):
         b[i][col] = int(input(f"({i},{col})   >"))
-        
         count += 1
         if count == size:
             break
     if count == size:
         break
 
-    for row in range(i+1, n-1-i):
-        # e = int(input(">>"))
-        b[row][m-1-i] = int(input(f"({row},{m-1-i})  >>"))
+    for row in range(i+1, m-1-i):
+        b[row][n-1-i] = int(input(f"({row},{n-1-i})  >>"))
         count += 1
         if count == size:
             break
     if count == size:
         break
 
-    for col in range(m-1-i, i-1, -1):
-        # e = int(input(">>>"))
-        b[n-1-i][col] = int(input(f"({i},{col}) >>>"))
+    for col in range(n-1-i, i-1, -1):
+        b[m-1-i][col] = int(input(f"({i},{col}) >>>"))
         count += 1
         if count == size:
             break
     if count == size:
         break
 
-    for row in range(n-2-i, i , -1):
-        # e = int(input(">>>>"))
+    for row in range(m-2-i, i , -1):
         b[row][i] = int(input(f"({row},{i})>>>>"))
         count += 1
         if count == size:
             break
     if count == size:
         break
-print("MATRIX IS \n")
+    
+print("\nMATRIX IS \n")
 for i in b:
     print(i)
+
 
