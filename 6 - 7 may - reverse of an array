@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+void print(int *arr , int len_arr){
+    for(int i = 0 ; i < len_arr ; i++){
+        cout << arr[i] << " ";
+    }
+}
+int main()
+{
+    // int arr[] = [1,2,3,4,5,6,7,8,9,10];    <-- WRONG
+//    int len_arr = arr.length();             <-- WRONG
+
+    int arr[] = {1,2,3,4,5,6,7,8,9};
+    // int arr[] = {1,2,3,4,5,6,7,8,9,10};
+    int len_arr = sizeof(arr) / sizeof(arr[0]);
+    int times = len_arr / 2;
+    for(int i = 0 ; i < times ; i++ ){
+       int temp = arr[i];
+       arr[i] = arr[(len_arr - 1) - i];
+       arr[(len_arr - 1) - i] = temp;       
+    }
+    // cout << arr; <-- THIS WILL RETURN ADDRESS OF 1ST ELEMENT OF ARRAY
+    print(arr,len_arr);
+    return 0;
+}
