@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int re,ce;
+    cin >> re >> ce;
+    for(int row = 1 ; row <= re ; row++){
+        for(int col = 1 ; col <= ce ; col++){
+            if (row == 1 || row == re){
+                cout << "*" ;
+            }
+            else{
+                if (col == 1 || col == ce){
+                    cout << "*";
+                }
+                else{
+                    cout << " ";
+                }
+            }
+        }
+        cout << endl;
+    }
+
+
+
+    return 0;
+}
