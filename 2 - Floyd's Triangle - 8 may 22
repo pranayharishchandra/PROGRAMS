@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main() {
+    // re - row_end
+    int re;
+    cin >> re ;
+    int i = 0;
+    for(int row = 1 ; row <= re ; row++){
+        for (int col = 1 ; col <= row ; col++){
+            cout << i++ << " ";
+        }     
+        cout << endl;
+    }
+
+    return 0;
+}
+
+/*
+5
+0 
+1 2 
+3 4 5 
+6 7 8 9        
+10 11 12 13 14 
+*/
