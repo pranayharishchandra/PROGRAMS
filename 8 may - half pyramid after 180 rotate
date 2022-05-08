@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int re;
+    cin >> re ;
+    for(int row = 1 ; row <= re ; row++){
+        for (int col = 1 ; col <= re ; col++){
+            if( col <= (re - row)){
+                cout << " ";            
+            }
+            else{
+                cout << "*";
+            }
+        }
+        
+        cout << endl;
+        
+    }
+
+    return 0;
+}
