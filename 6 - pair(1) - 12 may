@@ -1,0 +1,32 @@
+#include <iostream>
+#include <utility>
+using namespace std;
+int main() {
+    // METHODS TO INITIALIZE A PAIR
+    pair<int,int> p1(10,20);
+
+    pair<int, string> p2(21 , "hello");
+
+    cout << p2.first << " " << p2.second << endl;
+
+    pair<int,int> p4; 
+    pair<int,int> p3; 
+    cout << p3.first << " " << p3.second << endl; 
+    // you will get 0,0 before their default value 0 is given not the garbage value
+
+    p3 = {10 , 20};           //use this not make_pair ... both works same
+    p4 = make_pair(10,20);
+
+    //=========================================
+
+    pair<int , int> p5(1,10),p6(5,10);
+    cout << (p5 == p5)   // 0
+         << (p5 != p6)   // 1
+         << (p5 >  p6)   // 0
+         << (p5 <  p6);  // 1
+         // Only the first values i.e. 1,5 of p5,p6 respectively are compared
+         // Comparision always happend by first element 
+         
+
+    return 0;
+}
