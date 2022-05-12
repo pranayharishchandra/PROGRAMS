@@ -1,0 +1,33 @@
+#include <iostream>
+#include <utility>
+using namespace std;
+
+void sortChar(int *a, char *b, int n)
+{
+    pair<int, char> p1[n]; // you can use vector pair here also --> vector<pair<int, char>> p1;
+
+    // for (int x : a)
+    // {
+    //     int i = 0;
+    //     p1[i] = make_pair(x, b[i++]);
+    //     // i++;
+    // }
+
+    for (int i = 0; i < n; i++)
+        p1[i] = {a[i], b[i]};
+
+    sort(p1, p1 + n);
+
+    for (int i = 0; i < n; i++)
+        cout << p1[i].second;
+}
+int main()
+{
+    int a[] = {3, 1, 2};
+    char b[] = {'G', 'E', 'K'};
+
+    int n = sizeof(a) / sizeof(a[0]);
+
+    sortChar(a, b, n);
+    return 0;
+}
