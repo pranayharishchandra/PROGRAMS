@@ -22,14 +22,14 @@ int main()
         d = sqrt(d);
         B = d / (2 * a);
         printf("root1 = %f \n", A + B);
-        printf("root1 = %f \n", A - B);
+        printf("root2 = %f \n", A - B);
     }
     else
     {
         d = sqrt(-d);
         B = d / (2 * a);
         printf("root 1 = %f + (%f)i\n", A, B);
-        printf("root 1 = %f - (%f)i\n", A, B);
+        printf("root 2 = %f - (%f)i\n", A, B);
     }
 
     return 0;
