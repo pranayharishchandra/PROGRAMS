@@ -31,7 +31,6 @@ int sumOfTwoVectors(vector<int> v1, vector<int> v2)
         j--;
       }
       cout << endl;
-
   }
   return sum;
 }
